@@ -1,0 +1,561 @@
+Asks for apology.
+Refuses to talk because of ignore action.
+Greeting with vibrator inside.
+Greeting PC who's late to Sunday date.
+PC used follow command, they want to know what's up.
+Caught mastubating.
+Upset about PC not coming to date/meeting place.
+Generic good morning.
+Warns about cheating.
+Alone with PC.
+Seen walking to class together.
+Heckling a couple having sex.
+Seen naked.
+PC enters a forbidden zone (changing room, toilet, etc...).
+PC catches the characters having sex.
+Catches PC masturbating.
+Startled.
+Has lewd promise with PC, encouraging them to perform better.
+Sunday date greeting.
+A phrase about being a couple with PC.
+Recently became a couple with PC.
+Greeting lover.
+Greeting lover.
+Greeting, aroused.
+Greeting friend.
+Greeting enemy.
+Greeting, want to be useful.
+Greeting, PC aroused.
+Greeting, jealous.
+Greeting, annoyed.
+Greeting, sad.
+Greeting, relaxed.
+Greeting, really aroused.
+Greeting.
+Encouraging.
+Accepting encouragement.
+Refusing encouragement (Sad).
+Refusing encouragement (Not sad).
+Calming.
+Accepting to calm down.
+Refusing to calm down (Angry).
+Refusing to calm down (Not angry).
+Praising.
+Accepting praise (Low friendship/love).
+Accepting praise (High friendship/love).
+Refusing praise.
+Grumble.
+Answer: yes, you're hated
+Answer: no, you're not hated
+Apologizing.
+Forgiving.
+Not forgiving (Unforgivable).
+No apology required.
+Encouraging to study.
+Accepting encouragement to study.
+Refusing encouragement to study (Low friendship/love).
+Refusing encouragement to study (High friendship/love).
+Encouraging to exercise.
+Accepting encouragement to exercise.
+Refusing encouragement to exercise (Low friendship/love).
+Refusing encouragement to exercise (High friendship/love).
+Encouraging to do club activities.
+Accepting encouragement to do club stuff.
+Refusing encouragement to do club stuff (Low friendship/love).
+Refusing encouragement to do club stuff (High friendship/love).
+Encouraging harmony.
+Accepting encouragement for harmony.
+Refusing encouragement for harmony (Low friendship/love).
+Refusing encouragement for harmony (High friendship/love).
+Upset about seeing PC doing lewd things.
+Accepting to stop doing lewd things.
+Refusing to stop doing lewd things (Low friendship/love).
+Refusing to stop doing lewd things (High friendship/love).
+Spreading good rumours about @.
+Accepting good rumour.
+Refusing good rumour (Low friendship/love).
+Refusing good rumour (High friendship/love).
+Encouraging to get along with @.
+Accepting to get along with @.
+Refusing to get along with @ (Low friendship/love points).
+Refusing to get along with @ (High friendship/love points)
+Refusing to get along with @ (High hate/dislike points for @).
+Asking PC to help them get along with @.
+Accepting to help.
+Refusing to help (Low friendship/love points).
+Refusing to help (High friendship/love points).
+Refusing to help (High hate/dislake for @).
+Spreading bad rumors about @.
+Accepting rumors.
+Rejecting rumors (Low love/friendship).
+Rejecting rumours (High love/friendship.
+Asking if PC loves @.
+Asking if PC loves the character.
+Answer: yes (high love, has had sex with them, not a lover).
+Answer: no (high hate/dislike).
+Answer: yes (high friendship/love).
+Answer: yes (high love).
+Answer: character does not know that person well enough.
+Answer: character refuses to answer (Low love).
+Answer: character refuses to answer (High love).
+Inviting to talk about daily life.
+Accepting to talk about daily life. 
+Refusing to talk about daily life (Low love).
+Refusing to talk about daily life (High love).
+Inviting to talk about hobbies.
+Accepting to talk about hobbies.
+Refusing to talk about hobbies (Low love).
+Refusing to talk about hobbies (High love).
+Inviting to talk about food.
+Accepting to talk about food.
+Refusing to talk about food (Low love).
+Refusing to talk about food (High love).
+Inviting to talk about love.
+Accepting to talk about love.
+Refusing to talk about love (Low love).
+Refusing to talk about love (High love).
+Inviting to talk about lewd things.
+Accepting to talk about lewd things. 
+Refusing to talk about lewd things (Low love).
+Refusing to talk about lewd things (High love).
+Inviting to study when PC has better grades or student to teacher.
+Inviting to study when PC has worse grades or teacher to student.
+Accepting to study (Low love).
+Accepting to study (High love).
+Refusing to study (Low love/friendship).
+Refusing to study(High love/friendship).
+Inviting to exercise.
+Accepting to exercise (Low love).
+Accepting to exercise (High love).
+Refusing to exercise (Low love/friendship).
+Refusing to exercise (High love/friendship).
+Inviting to do club activities.
+Accepting to do club stuff (Low love).
+Accepting to do club stuff (High love).
+Refusing to do club stuff (Low love/friendship).
+Refusing to do club stuff (High love/friendship, same club).
+Refusing to do club stuff (High love/friendship, different clubs).
+Offering a massage.
+Accepting massage.
+Refusing to be massaged (Low love/friendship).
+Refusing to be massaged (High love/friendship).
+Inviting to classroom.
+Accepting to go to class (Low love).
+Accepting to go to class (High love).
+Refusing to go to class (Low love/friendship).
+Refusing to go to class (High love/friendship).
+Inviting to lunch.
+Accepting to have lunch (Low love).
+Accepting to have lunch (High love).
+Refusing to have lunch (Low love/friendship).
+Refusing to have lunch (High love/friendship).
+Refusing to have lunch (High love, already ate).
+Inviting for tea.
+Accepting to have tea (Low love).
+Accepting to have tea (High love).
+Refusing to have tea (Low love/friendship).
+Refusing to have tea (High love/friendship).
+Inviting to go home.
+Accepting to go home (Low love).
+Accepting to go home (High love).
+Refusing to go home (Low love/friendship).
+Refusing to go home (High love/friendship).
+Inviting to have fun.
+Accepting to have fun (Low love).
+Accepting to have fun (High love).
+Refusing to have fun (Low friend/love).
+Refusing to have fun (High friend/love).
+Refusing to have fun (Class time, high friend/love).
+Inviting to eat out.
+Accepting to eat out (Low love).
+Accepting to eat out (High love).
+Refusing to eat out (Low friend/love).
+Refusing to eat out (High friend/love).
+Refusing to eat out (Class time, high friend/love).
+Inviting to karaoke.
+Accepting karaoke (Low love).
+Accepting karaoke (High love).
+Refusing karaoke (Low friend/love).
+Refusing karaoke (High friend/love).
+Refusing karaoke (Class time, high friend/love).
+Inviting to own room to study.
+Inviting to own room to fuck under pretense of studying.
+Agreeing to go to room, intending to study.
+Agreeing to go to own room, intending H.
+Refusing to study at home (Low friendship/love).
+Refusing to study at home (Low friend, high love).
+Refusing to study at home (High friends, low love).
+Agreeing to fuck in own room.
+Inviting to fuck in own room.
+Insult.
+Masochist insult response
+Normal insult response
+Initiating a fight.
+Accepting a fight.
+Refusing a fight.
+Winning a fight.
+Losing a fight.
+Telling PC to not interact with @.
+Accepting to ignore someone (High love).
+Accepting to ignore someone.
+PC asks something the character already agreed to.
+Refusing to ignore someone.
+Asking to show "that", which is panties/dick.
+Accepting to show "that" (High love).
+Accepting to show "that" (Low love).
+Refusing to show "that" (Low love).
+Refusing to show "that" (High love).
+Forcing PC to insert a vibrator in public.
+Accepting to put on vibrator (High love).
+Accepting to put on vibrator.
+Already has vibrator on.
+Refusing to put on vibrator (Low love).
+Refusing to put on vibrator (High love).
+Forcing to have sex.
+Accepting to be forced (High love).
+Accepting to be forced (Low love).
+Refusing to be forced (Low love).
+Refusing to be forced (High love).
+Inviting to own club, \.
+Accepting to join club.
+Refusing to join club.
+PC invited character to his club, but they already are in the same club. 
+Inviting to date on Sunday.
+Accepting date.
+Accepting a date (Moderate/High love).
+PC invited character to date twice.
+Refusing date request (Low love).
+Refusing date request.
+Refusing a date because of prior arrangement.
+Ending a date happy.
+Ending a date upset.
+Confessing.
+Character not amused by confession (Low love).
+Character overjoyed by confession (High love).
+Unhappy with confession.
+Asking to be lovers (Low love).
+Asking to be lovers (High love).
+Offering a relationship knowing that PC already is in relationship with someone.
+Returning to PC after dumping them.
+Accepting to be lovers.
+Accepting relationship offer with high love.
+Accepting relationship offer while Evil.
+Refusing to be lovers because one of them is the teacher.
+Refusing to be lovers because PC already has a partner (High love points).
+Friendzoning PC.
+Generic refuse because NPC is homosexual.
+Generic refuse because NPC is heterosexual.
+Rejecting to be lovers (Low Hate).
+Refusing to be lovers.
+Initiating a break up.
+Initiating a break up because PC cheated.
+Initiating a break up because the NPC loves someone else more. 
+Accepting a break up (Low hate/dislike).
+Accepting a break up (High hate/dislike).
+Refusing to break up.
+Refusing a break up because they're evil.
+Asking to headpat.
+Happy yes (Auto PC).
+Getting patted on the head.
+Refusing headpat (Low love).
+Refusing headpat (High love).
+Asking to hug.
+Happy yes (Auto PC).
+Accepting a hug.
+Accepting a hug (High love).
+Refusing hug (Low love).
+Refusing hug (High love).
+Asking to kiss. 
+Happy yes (Auto PC).
+Low love kiss.
+First kiss (Taken).
+High love kiss (Not Aroused).
+High love kiss (Aroused).
+Refusing kiss (Low love).
+Refusing kiss (High love).
+Asking to grope. 
+Happy yes (Auto PC).
+Accepting grope while having big breasts.
+Accepting grope while having average breasts.
+Accepting grope while having small breasts.
+Accepting ass grope (male).
+Refusing to be groped (Low love).
+Refusing to be groped (High love).
+Asking for sex.
+Asking for sex while being a virgin.
+Asking for sex after being seen masturbating.
+Asking for sex with condom involved (Higher virtue, not safe day).
+Asking for sex right after having sex.
+Asking for sex when there's no one around.
+Asking for sex when someone's having sex nearby.
+Asking for sex after PC watches the character have sex with someone else.
+Asking for sex after the character watches PC have sex with someone else.
+Asking for sex while upset.
+Yes to being forced (has been forced before, low love).
+Accepting sex while being a virgin.
+Accepting sex as a promised reward for scholarship.
+Accepting sex while forcing to use a condom (Higher virtue, dangerous day).
+Accepting sex without a condom (Lower virtue, safe day).
+Accepting sex without a condom (Higher virtue, safe day).
+Accepting sex without a condom (Lower virtue, dangerous day).
+Accepting sex from lover when aroused.
+Accepting sex from lover and has anal preference.
+Accepting sex from lover.
+Accepting sex after already turning it down (not lovers).
+Accepting sex while having another lover.
+Accepting sex.
+Refusing sex as teacher.
+Refusing sex offer from teacher.
+Refusing sex (Higher virtue, virgin, high love points).
+Generic refuse because NPC is heterosexual (High love points, same gender).
+Generic refuse because NPC is homosexual (High love points, opposite gender).
+Refusing sex because haven't been dating for long enough (High love, embarrassed).
+Refusing sex because of location (High love, have not had sex before).
+Refusing sex when high virtue on a risky day (High love, have had sex).
+Refusing sex because unsafe day (High love, have had sex).
+Refusing sex because you just had sex.
+Refusing sex because not alone (High love).
+Refusing to be forced.
+Refusing to have sex.
+Asking PC to follow them (no H).
+Accepting to follow.
+Refuses to follow (Low friendship/love).
+Refuses to follow (High friendship/love).
+Asking PC to follow them (with H).
+Accepting to follow.
+Refuses to follow (Low friendship/love).
+Refuses to follow (High friendship/love).
+Initiating sex scene after inviting PC to secluded location.
+Initiating sex scene after following PC to secluded location.
+Asking PC to leave.
+Accepting to leave.
+Refusing to leave.
+Asking PC to wait at *.
+Asking PC to wait at * tomorrow morning.
+Accepting to wait at *.
+Refusing to wait at * (Low friendship/love).
+Refusing to wait at * (High friendship/love).
+Nevermind. 
+Replying to "Nevermind."
+Breaking up a conversation between her lover and someone else.
+Refusing to stop up a conversation.
+Accepting to stop up a conversation.
+"Which one of us?" Two of them say it and you must make your choice.
+Choosing someone who said "Which".
+Not choosing anyone: the character loves both.
+Not choosing anyone: the character loves neither.
+Not being chosen in the "Which" situation.
+Being chosen in the "Which" situation.
+Not amused with PC unable to pick either.
+Generic not pleased noises.
+Interrupting conversation.
+Accepting to break conversation enhusiastically.
+Accepting to break conversation.
+Mad at being interrupted.
+Breaking up a fight.
+Accepting to break up a fight.
+Interrupting sex and competing.
+Response to someone who's competing with them for their sex partner.
+Agreeing to switch because character is being raped.
+Asking PC who he wants to do after someone catches them fucking and asks to trade places.
+Picking someone to have sex with.
+Not picking anyone to have sex with.
+Not being chosen in the "Which" situation.
+Being saved from rape by a willing partner.
+Being chosen in the "Which" situation.
+Character is being raped, someone wants to do with with PC willingly, PC refuses.
+After an interruption, character is not chosen with "Huh?"
+Breaking up the sex scene.
+Accepting to break conversation unwillingly.
+Responding to someone who broke up the sex scene.
+Upset about being interrupted doing sex.
+Initiating 3P.
+Accepting 3P.
+Asking partner if they accept 3P.
+Accepting 3P after partner asks if PC is okay with it.
+Asking for a massage.
+Accepting to give massage.
+Refusing to give massage (Low friendship/love).
+Refusing to give massage (High friendship/love).
+Asking for a kiss.
+Accepting to kiss.
+Refusing kiss (Low friendship/love).
+Refusing kiss (High friendship/love).
+Offering hug.
+Accepting hug.
+Refusing hug (Low friendship/love).
+Refusing hug (High friendship/love).
+Asking to cut classes.
+Accepting to cut class.
+Refusing to cut class (Low friendship/love).
+Refusing to cut class (High friendship/love).
+Asking if PC had sex with @ after hearing rumors.
+Answer: yes, I had.
+Answer: no, I had not.
+Asking to show "that"; "that" being panties/dick.
+Accepting to see panties/dick.
+Refusing to see panties/dick (Low friendship/love).
+Refusing to see panties/dick (High friendship/love).
+Asking if PC ever had sex.
+Answer: yes, I had.
+Answer: no, I had not.
+Answer: character refuses to answer.
+Offering to exhange characters's $ for PC's #.
+Accepts to exchange items.
+Refuses to exchange items (Low friendship/love points).
+Refuses to exchange items (High friendship/love points).
+Asks if PC saw their panties during wind event.
+Character was asked if they saw panties during wind event, says yes.
+Character was asked if they saw panties during wind event, says no.
+Offering lewd promise.
+Accepts lewd promise (Low love points).
+Accepts lewd promise (High love points).
+Refuses lewd promise(Low friendship/love points).
+Refuses lewd promise (High friendship/love points).
+Inviting to cash in lewd promise.
+Accepts to cash in lewd promise (Low love).
+Accepts to cash in lewd promise (High love).
+Refuses to cash in lewd promise (Low love).
+Refuses to cash in lewd promise (High love).
+Cashing in lewd promise.
+Stabbing PC (TOGETHER FOREVER).
+Stabbing PC (I'll get you).
+Slapping PC.
+Good morning kiss.
+Good bye kiss.
+No-prompt kiss.
+Breaking up with PC because the character hates them.
+Informing PC about pregnancy.
+Informing PC he's about to be two-timed because he two-timed the character.
+Asking to keep affair a secret.
+Asking PC to stop following.
+Evil warning.
+Informing PC about how @ loves PC while the character does not care about PC.
+Informing PC about that @ was confessed to.
+Informing PC about how @ went on a date.
+Informing PC about how @ had sex in public.
+Exploitable complaining.
+Observing a lovers' quarrel over cheating.
+Initiating Evil no-prompt sex.
+Um. Short line to attract attention.
+Just laughing lightly.
+Asking to have sex.
+Introducing self to class.
+Deaf character couldn't hear what PC said.
+Asking to hold hands.
+Ridiculing PC for spamming a dialogue option too much.
+Refusing to follow PC into private room.
+Greeting, after surviving a stabbing.
+Character initiates date.
+Upset about being interrupted during sex.
+Low love sex?
+Post-3P, character on right.
+High and highest virtue not ready for penetration during sex.
+Commenting on PC taking both vaginal and anal virginites.
+Kissing PC as they forgot to do that prior to sex.
+PC took anal virginity before vaginal virginity.
+Commenting on losing anal virginity.
+Commenting on losing virginity.
+Commenting on male PC losing his virginity.
+Cleaning up a creampie.
+Embarrased about being creampied.
+Confronting PC about not coming inside on a safe day.
+Came inside on risky day: Normal-or-higher virtue
+Commenting on having sex without a condom.
+Came inside on risky day: Low or Lowest virtue
+Commenting on PC's condom after sex.
+Making an excuse after initiating sex while the character should have been studying.
+Commenting on PC initiating sex while they should have been studying.
+Interrupting public sex when seen by other NPCs.
+Commenting on being seen having sex and thinking nothing about it.
+Non-sleeping lewd cutting class line.
+Sleeping lewd cutting class line.
+Commenting on liking to do loads and loads of sex.
+Comparing PC to other lover, @. PC is better.
+Comparing self to PC's other lover.
+Urging PC to do it in vagina and not the ass.
+Cumfart.
+Asking PC to have anal sex.
+Commenting on PC coming too quickly.
+Commenting on the character coming too quickly.
+Commenting on PC coming too much.
+Commenting on having cum a lot. 
+Commenting on cumming together.
+Commenting own good technique after sex.
+Commenting on being tired after enjoyable sex.
+Commenting on sex scene ending without the character coming.
+Commenting on sex scene ending without PC coming.
+Commenting on having ahegao'd.
+Commenting on too many blowjobs.
+Commenting on too much bukkake.
+Commenting on drinking a lot of semen after sex.
+Commenting on sex scene without insertion.
+Upset about being interrupted during sex.
+Commenting on sex with a teacher.
+Commenting on sex with a student, while being teacher.
+Commenting on sex with a sexfriend.
+Default after-sex line while in a relationship.
+Evil after-sex line.
+Post-3P, character on left. 
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+[Male after-sex lines]
+Reaction to someone accepting their action/request.
+Reacting to someone refusing their action/request.
+After their apology is accepted.
+Reacting to an unsatisfactory response.
+Lower-love response to someone's answer for "have you had sex" or "do you like @"
+Reacting to PC confessing about cheating.
+Angry reaction to PC's response to their insult or fight request.
+PC accepted their relationship request. 
+PC accepted their relationship request while she's evil.
+After their breakup is accepted.
+PC accepted their breakup request because PC cheated.
+After asking if PC ever had sex, finding out that he had (High-love, male partner).
+After asking if PC ever had sex, finding out that he had not (High-love, male partner).
+Successfully exchanged belongings.
+Liking their panties seen after wind event.
+Upset line (triggered by various events).
+Giving headpat. 
+PC accepted hug request.
+Hugging PC. 
+Giving low-love kiss.
+Kissing PC, giving out the first kiss.
+High love kiss.
+High love and aroused kiss.
+Rubbing girl's breasts.
+Rubbing ass.
+PC accepted their kiss request.
+Consoling hug.
+Showing "that", "that" being panties.
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
+[NoDim Extra Line?]
