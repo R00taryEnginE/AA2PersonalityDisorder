@@ -1,0 +1,56 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag name (e.g. v1.0.0)'
+        required: true
+      release_name:
+        description: 'Release title'
+        required: true
+      release_body:
+        description: 'Release notes/description'
+        required: false
+      prerelease:
+        description: 'Mark as pre-release? (true/false)'
+        required: false
+        default: 'false'
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+
+    - name: Restore NuGet packages
+      working-directory: solution
+      run: nuget restore AA2PersonalityDisorder.sln
+
+    - name: Build solution
+      working-directory: solution
+      run: msbuild AA2PersonalityDisorder.sln /p:Configuration=Release /m
+
+    - name: Create ZIP package
+      run: |
+        mkdir package
+        powershell Compress-Archive -Path "solution\bin\Release\*" -DestinationPath "package\MyApp-${{ github.event.inputs.tag }}.zip"
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: ${{ github.event.inputs.tag }}
+        name: ${{ github.event.inputs.release_name }}
+        body: ${{ github.event.inputs.release_body }}
+        files: package/*.zip
+        prerelease: ${{ github.event.inputs.prerelease }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
