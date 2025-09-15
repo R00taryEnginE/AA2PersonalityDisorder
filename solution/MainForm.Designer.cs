@@ -42,11 +42,11 @@ namespace AA2PersonalityDisorder
             this.loadProjectButton = new System.Windows.Forms.Button();
             this.saveProjectButton = new System.Windows.Forms.Button();
             this.filesSetupGroupBox = new System.Windows.Forms.GroupBox();
+            this.dialog02DataLabel = new System.Windows.Forms.Label();
             this.audioDirTextbox = new System.Windows.Forms.TextBox();
             this.setAudioDirButton = new System.Windows.Forms.Button();
             this.open02DialogButton = new System.Windows.Forms.Button();
             this.dialog02EditorTab = new System.Windows.Forms.TabPage();
-            this.dialog02DataLabel = new System.Windows.Forms.Label();
             this.dialog02EditorPage = new AA2PersonalityDisorder.Dialog02EditorPage();
             this.globalStatusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -76,6 +76,7 @@ namespace AA2PersonalityDisorder
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip1.Enabled = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.optionsToolStripMenuItem});
@@ -185,6 +186,15 @@ namespace AA2PersonalityDisorder
             this.filesSetupGroupBox.TabStop = false;
             this.filesSetupGroupBox.Text = "Project Files";
             // 
+            // dialog02DataLabel
+            // 
+            this.dialog02DataLabel.AutoSize = true;
+            this.dialog02DataLabel.Location = new System.Drawing.Point(163, 46);
+            this.dialog02DataLabel.Name = "dialog02DataLabel";
+            this.dialog02DataLabel.Size = new System.Drawing.Size(80, 13);
+            this.dialog02DataLabel.TabIndex = 4;
+            this.dialog02DataLabel.Text = "No data loaded";
+            // 
             // audioDirTextbox
             // 
             this.audioDirTextbox.Location = new System.Drawing.Point(163, 84);
@@ -223,15 +233,6 @@ namespace AA2PersonalityDisorder
             this.dialog02EditorTab.TabIndex = 1;
             this.dialog02EditorTab.Text = "02 Dialog Editor";
             this.dialog02EditorTab.UseVisualStyleBackColor = true;
-            // 
-            // dialog02DataLabel
-            // 
-            this.dialog02DataLabel.AutoSize = true;
-            this.dialog02DataLabel.Location = new System.Drawing.Point(163, 46);
-            this.dialog02DataLabel.Name = "dialog02DataLabel";
-            this.dialog02DataLabel.Size = new System.Drawing.Size(80, 13);
-            this.dialog02DataLabel.TabIndex = 4;
-            this.dialog02DataLabel.Text = "No data loaded";
             // 
             // dialog02EditorPage
             // 
