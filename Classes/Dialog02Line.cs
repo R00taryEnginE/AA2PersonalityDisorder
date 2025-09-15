@@ -52,6 +52,31 @@ namespace AA2PersonalityDisorder.Classes
         private int _tearsState; // Values: 0 - 3 - 0 = none, 1 = tears, 2 = eye shimmer, 3 = tears + eye shimmer
         private bool _eyeHighlight = true; // Values: 0 - 1
 
+        // Tracks which properties were marked dirty due to import (missing/invalid values)
+        private readonly HashSet<string> _importDirty = new HashSet<string>(StringComparer.Ordinal);
+
+        [Browsable(false)]
+        public IEnumerable<string> ImportDirtyProperties => _importDirty;
+
+        // Call during parsing to tag a property as import-dirty and reflect it in UI
+        public void FlagImportDirty(string propertyName)
+        {
+            if (string.IsNullOrWhiteSpace(propertyName))
+                return;
+
+            _importDirty.Add(propertyName);
+            MarkDirty(propertyName);
+        }
+
+        // After AcceptChanges on load, call this to re-apply import-dirty flags without changing values
+        public void ReapplyImportDirty()
+        {
+            foreach (var p in _importDirty)
+            {
+                MarkDirty(p);
+            }
+        }
+
         [Description("Audio file name, relative to the personality's audio folder.\nA value of 0 means no audio")]
         [Category("01. General")]
         [DisplayName("Audio File")]

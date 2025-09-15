@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -14,110 +15,148 @@ namespace AA2PersonalityDisorder.Classes
             var lines = File.ReadAllLines(filePath, Encoding.GetEncoding("shift_jis"));
             foreach (var line in lines)
             {
-                try 
-                {
-                    var parsedLines = Parse02Line(line);
-                    entries.AddRange(parsedLines);
-                }
-                catch (FormatException ex)
-                {
-                    MessageBox.Show($"Error parsing line: {ex.Message}", "Parsing Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    break;
-                }
+                // Tolerant parsing: never throw for malformed lines
+                var parsedLines = Parse02Line(line);
+                entries.AddRange(parsedLines);
             }
             return entries;
         }
 
         public IEnumerable<Dialog02Line> Parse02Line(string line)
         {
-            var parts = line.Split('\t');
-
-            // Expecting exactly 54 parts for 3 groups of 18 attributes each
-            if (parts.Length != 54)
-                throw new FormatException($"Expected 54 parts in line, but got {parts.Length}.");
-
-            int groupCount = parts.Length / 18;
-            if (groupCount != 3)
-                throw new FormatException($"Expected 3 dialog groups per line, but got {groupCount}.");
+            // Split but tolerate fewer/more parts; we only read up to 54 expected ones.
+            var parts = string.IsNullOrEmpty(line) ? Array.Empty<string>() : line.Split('\t');
 
             var dialogLine = new Dialog02Line();
 
             for (int g = 0; g < 3; g++)
             {
                 int baseIdx = g * 18;
-                if (baseIdx + 18 > parts.Length)
-                    break;
-
                 var group = dialogLine.Groups[g];
 
-                // AudioFile and DialogText
-                group.AudioFile = parts[baseIdx];
-                group.DialogText = parts[baseIdx + 1];
+                // AudioFile (string or "0")
+                if (IsMissing(parts, baseIdx))
+                {
+                    group.AudioFile = "0";
+                    group.FlagImportDirty(nameof(Dialog02Group.AudioFile));
+                }
+                else
+                {
+                    string audio = parts[baseIdx];
+                    if (string.IsNullOrWhiteSpace(audio))
+                    {
+                        group.AudioFile = "0";
+                        group.FlagImportDirty(nameof(Dialog02Group.AudioFile));
+                    }
+                    else
+                    {
+                        group.AudioFile = audio;
+                    }
+                }
 
-                // CameraAngle
-                int.TryParse(parts[baseIdx + 2], out int cameraAngle);
-                group.CameraAngle = cameraAngle;
+                // DialogText ("-1", "0", or string)
+                if (IsMissing(parts, baseIdx + 1))
+                {
+                    group.DialogText = "-1";
+                    group.FlagImportDirty(nameof(Dialog02Group.DialogText));
+                }
+                else
+                {
+                    string txt = parts[baseIdx + 1];
+                    if (string.IsNullOrWhiteSpace(txt))
+                    {
+                        group.DialogText = "-1";
+                        group.FlagImportDirty(nameof(Dialog02Group.DialogText));
+                    }
+                    else
+                    {
+                        group.DialogText = txt;
+                    }
+                }
 
-                // Pose
-                int.TryParse(parts[baseIdx + 3], out int pose);
-                group.Pose = pose;
+                // Ints
+                group.CameraAngle    = ParseIntOrDefault(parts, baseIdx + 2,  0, group, nameof(Dialog02Group.CameraAngle));
+                group.Pose           = ParseIntOrDefault(parts, baseIdx + 3,  0, group, nameof(Dialog02Group.Pose));
+                group.GazeDirection  = ParseIntOrDefault(parts, baseIdx + 4,  0, group, nameof(Dialog02Group.GazeDirection));
+                group.EyebrowState   = ParseIntOrDefault(parts, baseIdx + 5,  0, group, nameof(Dialog02Group.EyebrowState));
+                group.EyeState       = ParseIntOrDefault(parts, baseIdx + 6,  0, group, nameof(Dialog02Group.EyeState));
+                group.EyeOpenState   = ParseIntOrDefault(parts, baseIdx + 7,  0, group, nameof(Dialog02Group.EyeOpenState));
 
-                // GazeDirection
-                int.TryParse(parts[baseIdx + 4], out int gazeDirection);
-                group.GazeDirection = gazeDirection;
+                // PupilState (bool: "0"/"1")
+                group.PupilState     = ParseBool01(parts, baseIdx + 8, false, group, nameof(Dialog02Group.PupilState));
 
-                // EyebrowState
-                int.TryParse(parts[baseIdx + 5], out int eyebrowState);
-                group.EyebrowState = eyebrowState;
+                // More ints
+                group.MouthState     = ParseIntOrDefault(parts, baseIdx + 9,  0, group, nameof(Dialog02Group.MouthState));
 
-                // EyeState
-                int.TryParse(parts[baseIdx + 6], out int eyeState);
-                group.EyeState = eyeState;
+                // Floats (use group defaults for Max values)
+                group.MaxMouthWidth  = ParseFloatOrDefault(parts, baseIdx + 10, 1f, group, nameof(Dialog02Group.MaxMouthWidth));
+                group.MinMouthWidth  = ParseFloatOrDefault(parts, baseIdx + 11, 0f, group, nameof(Dialog02Group.MinMouthWidth));
+                group.MaxMouthHeight = ParseFloatOrDefault(parts, baseIdx + 12, 1f, group, nameof(Dialog02Group.MaxMouthHeight));
+                group.MinMouthHeight = ParseFloatOrDefault(parts, baseIdx + 13, 0f, group, nameof(Dialog02Group.MinMouthHeight));
 
-                // EyeOpenState
-                int.TryParse(parts[baseIdx + 7], out int eyeOpenState);
-                group.EyeOpenState = eyeOpenState;
+                // Ints
+                group.BlushLineState = ParseIntOrDefault(parts, baseIdx + 14, 0, group, nameof(Dialog02Group.BlushLineState));
+                group.BlushState     = ParseIntOrDefault(parts, baseIdx + 15, 0, group, nameof(Dialog02Group.BlushState));
+                group.TearsState     = ParseIntOrDefault(parts, baseIdx + 16, 0, group, nameof(Dialog02Group.TearsState));
 
-                // PupilState
-               group.PupilState = parts[baseIdx + 8] == "1";
-
-                // MouthState
-                int.TryParse(parts[baseIdx + 9], out int mouthState);
-                group.MouthState = mouthState;
-
-                // MaxMouthWidth
-                float.TryParse(parts[baseIdx + 10], out float MaxMouthWidth);
-                group.MaxMouthWidth = MaxMouthWidth;
-
-                // MinMouthWidth
-                float.TryParse(parts[baseIdx + 11], out float MinMouthWidth);
-                group.MinMouthWidth = MinMouthWidth;
-
-                // MaxMouthHeight
-                float.TryParse(parts[baseIdx + 12], out float MaxMouthHeight);
-                group.MaxMouthHeight = MaxMouthHeight;
-
-                // MinMouthHeight
-                float.TryParse(parts[baseIdx + 13], out float MinMouthHeight);
-                group.MinMouthHeight = MinMouthHeight;
-
-                // BlushLineState
-                int.TryParse(parts[baseIdx + 14], out int blushLineState);
-                group.BlushLineState = blushLineState;
-
-                // BlushState
-                int.TryParse(parts[baseIdx + 15], out int blushState);
-                group.BlushState = blushState;
-
-                // TearsState
-                int.TryParse(parts[baseIdx + 16], out int tearsState);
-                group.TearsState = tearsState;
-
-                // EyeHighlight
-                group.EyeHighlight = parts[baseIdx + 17] == "1";
+                // EyeHighlight (bool: "0"/"1")
+                group.EyeHighlight   = ParseBool01(parts, baseIdx + 17, false, group, nameof(Dialog02Group.EyeHighlight));
             }
 
             yield return dialogLine;
+        }
+
+        private static bool IsMissing(string[] parts, int idx)
+        {
+            return idx >= parts.Length || parts[idx] == null;
+        }
+
+        private static int ParseIntOrDefault(string[] parts, int idx, int @default, Dialog02Group group, string propertyName)
+        {
+            if (idx >= parts.Length || string.IsNullOrWhiteSpace(parts[idx]))
+            {
+                group.FlagImportDirty(propertyName);
+                return @default;
+            }
+            int v;
+            if (!int.TryParse(parts[idx], out v))
+            {
+                group.FlagImportDirty(propertyName);
+                return @default;
+            }
+            return v;
+        }
+
+        private static float ParseFloatOrDefault(string[] parts, int idx, float @default, Dialog02Group group, string propertyName)
+        {
+            if (idx >= parts.Length || string.IsNullOrWhiteSpace(parts[idx]))
+            {
+                group.FlagImportDirty(propertyName);
+                return @default;
+            }
+            float v;
+            if (!float.TryParse(parts[idx], NumberStyles.Float, CultureInfo.InvariantCulture, out v) &&
+                !float.TryParse(parts[idx], out v)) // fallback to current culture
+            {
+                group.FlagImportDirty(propertyName);
+                return @default;
+            }
+            return v;
+        }
+
+        private static bool ParseBool01(string[] parts, int idx, bool @default, Dialog02Group group, string propertyName)
+        {
+            if (idx >= parts.Length || string.IsNullOrWhiteSpace(parts[idx]))
+            {
+                group.FlagImportDirty(propertyName);
+                return @default;
+            }
+            var s = parts[idx].Trim();
+            if (s == "0") return false;
+            if (s == "1") return true;
+
+            group.FlagImportDirty(propertyName);
+            return @default;
         }
     }
 }

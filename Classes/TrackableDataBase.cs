@@ -50,7 +50,17 @@ namespace AA2PersonalityDisorder.Classes
             else
                 _dirtyProperties.Remove(propertyName);
 
+            OnPropertyChanged(propertyName);
+            OnPropertyChanged(nameof(IsDirty));
+        }
 
+        // Explicitly mark a property as dirty without changing its value (used to flag import issues)
+        protected void MarkDirty(string propertyName)
+        {
+            if (string.IsNullOrWhiteSpace(propertyName))
+                return;
+
+            _dirtyProperties.Add(propertyName);
             OnPropertyChanged(propertyName);
             OnPropertyChanged(nameof(IsDirty));
         }

@@ -90,12 +90,18 @@ namespace AA2PersonalityDisorder
                                 // Set as data source
                                 dialogConditionsGridView.DataSource = new BindingList<DialogConditionListItem>(dialogConditionsList);
 
-                                // Set all data as original to reset dirty tracking
+                                // Reset dirty tracking to consider loaded values as original,
+                                // then re-apply import dirty flags so missing/invalid fields stay highlighted.
                                 foreach (var line in loadedDialogLines)
                                 {
                                     foreach (var group in line.Groups)
                                     {
+                                        bool hasImportIssues = group.ImportDirtyProperties != null && group.ImportDirtyProperties.Any();
                                         group.AcceptChanges();
+                                        if (hasImportIssues)
+                                        {
+                                            group.ReapplyImportDirty();
+                                        }
                                     }
                                 }
 

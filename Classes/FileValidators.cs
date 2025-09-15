@@ -23,20 +23,8 @@ namespace AA2PersonalityDisorder.Classes
                 if (lines.Length == 0)
                     return ValidationResult.Fail("File is empty.");
 
-                if (lines.Length < 542)
-                    return ValidationResult.Fail("Dialog file has too few lines.");
-
-                foreach (var line in lines)
-                {
-                    var parts = line.Split('\t');
-                    if (parts.Length != 54)
-                        return ValidationResult.Fail($"Line has {parts.Length} parameters, expected 54.");
-
-                    int groupCount = parts.Length / 18;
-                    if (groupCount != 3)
-                        return ValidationResult.Fail($"Expected 3 dialog groups per line, but got {groupCount}.");
-                }
-
+                // Make validation permissive: the parser now handles short/invalid lines and flags them.
+                // We still succeed here so the file can be loaded.
                 return ValidationResult.Success();
             }
         }
